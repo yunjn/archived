@@ -1,0 +1,9 @@
+GitBat/core/r.log
+*.o
+*.pth
+main
+*.exe
+.vscode
+snake/build
+database/static/html
+__pycache__

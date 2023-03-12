@@ -1,0 +1,9 @@
+.vscode/
+__pycache__
+*.mp4
+*.jpg
+inference
+assets
+test.py
+param.py
+*.pt

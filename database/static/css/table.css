@@ -1,0 +1,21 @@
+.mystyle {
+    font-size: 14pt; 
+    width:100%;
+    /* height:90%; */
+    text-align: center;
+    vertical-align:middle;
+    font-family: Arial;
+    border-collapse: collapse; 
+    /* border: 1px solid rgb(194, 194, 194); */
+    border: 1px solid #0396FF; 
+}
+.mystyle td, th {
+    padding: 5px;
+}
+.mystyle tr:nth-child(even) {
+    background: #ffffff;
+}
+.mystyle tr:hover {
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+}

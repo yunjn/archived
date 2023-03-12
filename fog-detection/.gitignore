@@ -1,0 +1,11 @@
+__pycache__
+*.mp4
+*.bat
+.vscode
+fog
+
+#需自行添加
+dataset/fog_data
+resources/out/fog.pth
+resources/resnet/resnet50.pth
+

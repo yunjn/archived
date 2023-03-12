@@ -1,0 +1,52 @@
+<!--
+    version:2.1.2
+    author:IAN
+    date:2020/5/6
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>IAN</title>
+
+    <link rel="stylesheet" href="lib/css/bright.css" type="text/css" id="mode" />
+    <link rel="stylesheet" href="lib/css/modeSetting.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script type="text/javascript" src="lib/js/homepage.js"></script>
+    <link rel="icon" href="lib/img/logo.png" type="image/jpg">
+</head>
+
+<body>
+    <!--heart-->
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <!--搜索框-->
+    <div class="search-box">
+        <input type="text" class="search-txt" placeholder="" id="wd" autocomplete="off" onkeydown="entersearch()" />
+        <a class="search-btn">
+            <button class="fas fa-search" onclick="return search()" id="search-butten"></button>
+        </a>
+    </div>
+
+    <!--dark模式开关-->
+    <div class="toggle">
+        <label for="toggle">
+        <input type="checkbox" id="toggle" onclick="modechange()">
+        <span></span>
+      </label>
+    </div>
+</body>
+
+</html>

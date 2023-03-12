@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>woho~</title>
+    <link href="../static/index.css" rel="stylesheet" type="text/css">
+    <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+    <script type="text/javascript" src="../static/index.js"></script>
+</head>
+
+<body>
+    <h3 class="text-muted" align="center">Image Matting & Change Background</h3>
+    <div align="center">
+        <h4 align="center">Image Matting</h4>
+
+        <div class="container">
+            <table>
+                <tr>
+                    <td><img src="../static/img/null.jpg" id="img0" style="width: 400px;height: 320px;"></td>
+                    <td><img src="../static/img/null.jpg" id="img1" style="width: 400px;height: 320px;"></td>
+                </tr>
+                <tr>
+                    <td> <a href="javascript:;" class="file">Select
+                            <input type="file" name="file0" id="file0">
+                        </a>
+                    </td>
+                    <td> <input type="button" id="b0" onclick="matting()" value="Submit" class="button"></td>
+                </tr>
+            </table>
+        </div>
+
+        </br>
+
+        <h4 align="center">Change Background</h4>
+        <div class="container">
+            <table>
+                <tr>
+                    <td><img src="../static/img/null.jpg" id="img2" style="width: 400px;height: 320px;"></td>
+                    <td><img src="../static/img/null.jpg" id="img3" style="width: 400px;height: 320px;"></td>
+                </tr>
+                <tr>
+                    <td> <a href="javascript:;" class="file">Select
+                            <input type="file" name="file1" id="file1">
+                        </a>
+                    </td>
+                    <td> <input type="button" id="b1" onclick="change_bg()" value="Submit" class="button"></td>
+                </tr>
+            </table>
+
+        </div>
+
+
+    </div>
+
+    <footer class="footer" align="center">
+        <p>@Samuel</p>
+    </footer>
+    <script type="text/javascript">
+        $("#file0").change(function () {
+            var objUrl = getObjectURL(this.files[0]);//获取文件信息
+            if (objUrl) {
+                $("#img0").attr("src", objUrl);
+            }
+            this.file
+        });
+
+        $("#file1").change(function () {
+            var objUrl = getObjectURL(this.files[0]);//获取文件信息
+            if (objUrl) {
+                $("#img2").attr("src", objUrl);
+            }
+        });
+
+        function getObjectURL(file) {
+            var url = null;
+            if (window.createObjectURL != undefined) {
+                url = window.createObjectURL(file);
+            } else if (window.URL != undefined) { // mozilla(firefox)
+                url = window.URL.createObjectURL(file);
+            } else if (window.webkitURL != undefined) { // webkit or chrome
+                url = window.webkitURL.createObjectURL(file);
+            }
+            return url;
+        }
+    </script>
+
+    </div>
+</body>
+
+</html>
